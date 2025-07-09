@@ -82,6 +82,16 @@ const columns: ColumnsType<DataType> = [
 
   },
 
+  {
+
+    title: "ที่อยู่",
+
+    dataIndex: "Address",
+
+    key: "address",
+
+  },
+
 ];
 
 

@@ -17,8 +17,8 @@ func DB() *gorm.DB {
 func ConnectionDB() {
    database, err := gorm.Open(sqlite.Open("sa.db?cache=shared"), &gorm.Config{})
    if err != nil {
-       panic("failed to connect database")
-   }
+        panic(fmt.Sprintf("failed to connect database: %v", err))
+    }
    fmt.Println("connected database")
    db = database
 }
@@ -44,7 +44,9 @@ func SetupDatabase() {
        Age:       80,
        Password:  hashedPassword,
        BirthDay:  BirthDay,
+	   Address: "F11",
        GenderID:  1,
+	
    }
    db.FirstOrCreate(User, &entity.Users{
        Email: "sa@gmail.com",

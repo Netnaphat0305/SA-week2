@@ -328,7 +328,6 @@ function SignUpPages() {
                       ]}
 
                     >
-
                       <InputNumber
 
                         min={0}
@@ -340,6 +339,32 @@ function SignUpPages() {
                         style={{ width: "100%" }}
 
                       />
+
+                    </Form.Item>
+
+                  </Col>
+
+                  <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+
+                    <Form.Item
+
+                      label="ที่อยู่"
+
+                      name="address"
+
+                      rules={[
+
+                        {
+
+                          required: true,
+
+                          message: "กรุณากรอกที่อยู่ของคุณ !",
+
+                        },
+
+                      ]}
+                    >
+                      <Input.TextArea rows={4} />
 
                     </Form.Item>
 
